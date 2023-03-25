@@ -1,0 +1,242 @@
+/* start css  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    min-height: 15vh;
+    background-color: rgb(178, 219, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+body{
+    background-color: #252525 !important;
+    overflow-x: hidden;
+}
+
+header h1{
+   color: rgb(0, 0, 59);
+   position: relative;
+}
+
+header::before{
+position: absolute;
+content: "";
+width: 10%;
+height: 15vh;
+left: 0;
+background-image: linear-gradient(to right,transparent,rgba(255, 255, 255, 0.388),transparent);
+transform: skew(-20deg);
+animation: move 7s linear infinite;
+}
+@keyframes move {
+    to{
+      left: 100%;
+      top: 0;
+    }
+    from{
+        right: 100%;
+        top: 0;
+    }
+}
+
+header  img{
+    width: 4.1rem;
+    transition: all 0.5s ease;
+    filter: drop-shadow(5px 5px 5px rgba(64, 245, 255, 0.425));
+}
+
+header img:hover{
+    transform: rotate(360deg);
+}
+.bg{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 2rem;
+}
+
+.bg h1{
+   font-size: 3rem; 
+   text-transform: uppercase;
+   color: white;
+}
+
+.bg h2{
+    color: aqua;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 25px;
+    text-align: center;
+}
+
+.info form input[type="search"]{
+   width: 25rem;
+   height: 2.6rem;
+   border: none;
+   background-color: white;
+   box-shadow: 10px 10px 25px black;
+   border-radius: 50px;
+   font-size: 18px;
+   padding: 0 15px;
+   /* margin-top: 5rem; */
+}
+
+.info form input[type="search"]:focus{
+    outline: none;
+    border: 1.5px solid rgb(9, 169, 20);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.info form input[type="submit"]{
+    width: 10rem;
+    height: 2.6rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(4, 205, 255);
+    font-size: 19px;
+    /* margin-top: 10px; */
+}
+
+.titel{
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#net{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+
+.align{
+    width: 26rem;
+    background-color: rgba(0, 0, 0, 0.404);
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.695);
+}
+
+.align .all{
+    width: 100%;
+    height: 50rem;
+    overflow-y: scroll;
+}
+
+.all::-webkit-scrollbar{
+    background-color: rgba(0, 255, 251, 0.384);
+    width: 5px;
+}
+
+.all::-webkit-scrollbar-button{
+    background-color: black;
+}
+
+.align img{
+    width: 100%;
+    border-radius: 20px  ;
+}
+
+.align h1{
+  color: aqua;
+}
+
+.align h3{
+    color: white;
+}
+
+.align h4{
+    color: white;
+}
+
+.align p{
+    color: gray;
+    font-size: 19px;
+    line-height: 30px;
+}
+
+@media (max-width:500px) {
+    .align{
+        width: 21rem;
+    }
+
+    .align .all{
+        height: 35rem;
+    }
+
+    .align h1{
+        font-size: 20px;
+    }
+
+    .align h3{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .align h4{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .align p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+@media (max-width:420px) {
+    .info form input[type="search"]{
+        width: 18rem;
+        font-size: 16px;
+    }
+    .info form input[type="submit"]{
+        width: 8rem;
+    }
+
+    .bg h1{
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .bg h2{
+        font-size: 20px;
+    }
+
+    header  img{
+        width: 3.5rem;
+    }
+    
+    header h1{
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+}
